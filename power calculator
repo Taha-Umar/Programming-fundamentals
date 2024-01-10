@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std ;
+int main()
+{
+	int x,y,ans;
+	float total=1;
+	bool flag=0;
+	cout<<"Enter the value of X";
+	cin>>x;
+	cout<<"Enter the value of Y";
+	cin>>y;
+	if (y<0)
+	{
+	 y=-(y);
+		flag=1;
+	}
+	
+	{
+	  for(int i=1;i<=y;i++)
+	  {  
+		
+		 total=total*x;
+	          if (flag==1)
+		       total=1/total;
+         cout << total;
+	}
+
+	
+	system("pause");
+	return 0;
+}
