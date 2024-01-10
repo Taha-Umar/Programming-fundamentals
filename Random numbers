@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int dice1,dice2,sum,product;
+	for(int i =1 ; i<=10; i++)
+	{
+		dice1=rand()%6+1;
+		dice2=rand()%6+1;
+		sum=dice1+dice2;
+		product=dice1*dice2;
+		cout<<"The sum of the dice is " << sum <<"  " ;
+		cout<<"The product of the dice is " << product << endl;
+	}
+	system("pause");
+	return 0;
+}
