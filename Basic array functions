@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+
+void initialArray(int arr[])
+{
+	for(int i=0;i<10;i++)
+	{
+		cin>>arr[i];
+	}
+}
+void initialArray1(int arr[])
+{
+	for(int i=0;i<5;i++)
+	{
+		cin>>arr[i];
+	}
+}
+
+void printArray(int arr[])
+{
+	for(int i=0;i<10;i++)
+	{
+		cout<<arr[i];
+		cout<<" ";
+	}
+	
+}
+
+void EvenSort(int arr[])
+{
+	int j=0;
+	for(int i=0;i<10;i++)
+	{
+		if (arr[i]%2==0)
+		{
+			int temp=arr[j];
+			arr[j]=arr[i];
+			arr[i]=temp;
+		    j++;
+		}
+	}
+}
+void binomSum(int arr[],int size)
+{
+	
+	for (int i=0;i<10;i++)
+	{
+		int count=0;
+		for (int j=1;j<=arr[i];j++)
+		{
+			count=count+j;
+	}
+		arr[i]=count;	
+	}
+}
+void SquareArray(int arr[])
+{
+	int array2[5];
+	for(int i=0;i<5;i++)
+	{
+		array2[i]=arr[i];
+	}
+	for (int j=0;j<5;j++)
+	{
+	  int square=array2[j]*array2[j];
+	  array2[j]=square; 
+	}
+	 cout<<"Array 1"<<"     "<<"Array 2 \n";
+	 
+    for (int k=0;k<5;k++)
+    {
+	 cout<<arr[k]<<"            "<<array2[k] <<"\n";
+    }
+}
+
+int main()
+{
+	int array[10];
+	cout<<"Enter 10 numbers\n";
+	initialArray(array);
+
+	cout<<"Your Array:\n";
+	printArray(array);
+	cout<<"\n";
+	cout<<"Even Numbers at the start:\n";
+    EvenSort(array);
+	printArray(array);
+	cout<<"\n";
+	cout<<"Sum Array: \n";
+	binomSum(array,10);
+	printArray(array);	
+	cout<<"\n";
+	int array1[5];
+	cout<<"Enter your second array \n";
+	initialArray1(array1);
+	SquareArray(array1);
+	
+return 0;	
+}
